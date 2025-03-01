@@ -1,0 +1,29 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "tests/**/*.ts"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "tests/*": ["./tests/*"]
+    },
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "verbatimModuleSyntax": false,
+    "allowSyntheticDefaultImports": true,
+  },
+
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    }
+  ],
+  "exclude": ["node_modules", "dist"]
+}
